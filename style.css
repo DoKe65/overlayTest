@@ -2,6 +2,17 @@ body {
   font-family: Karla, Helvetica, sans-serif;
 }
 
+#btnVorschau {
+  display: inline-block;
+  font-size: 2em;
+  margin: 2em;
+  cursor: pointer;
+  padding: 0.5em;
+  border: 2px solid #9a9a9a;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
 #overlay {
   display: none;
   position: fixed; /* Stay in place */
@@ -11,7 +22,7 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #80808082;
+  background-color: #4e4e4ec2;
 }
 
 #lightbox {
