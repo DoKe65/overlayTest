@@ -31,5 +31,4 @@ btnVorschau.addEventListener("click", (e) => {
   overlay.appendChild(lightbox);
   document.body.appendChild(overlay);
 
-
 });
