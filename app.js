@@ -1,6 +1,9 @@
 // Aus Produktseite des Shops:
+// Im Produkt muss für den Button die entsprechenden data- Attributte
+// gesetzt werden, z. B. data-url="kursunterlagen/leseproben/LP_ECDL_BB"
+// und data-title="ECDL Bidlbearbeitung mit GIMP 2.8"
 const btnVorschau = document.getElementById("btnVorschau");
-const file = btnVorschau.getAttribute("data-file");
+const url = btnVorschau.getAttribute("data-url");
 const title = btnVorschau.getAttribute("data-title");
 
 const overlay = document.createElement("div");
@@ -10,7 +13,7 @@ const iFrame = document.createElement("iframe");
 const closeLightbox = document.createElement("button");
 
 
-function showLightbox(file, title) {
+function showLightbox(url, title) {
 
   btnVorschau.addEventListener("click", (e) => {
 
@@ -19,11 +22,11 @@ function showLightbox(file, title) {
 
     lightbox.setAttribute("id", "lightbox");
 
-    iFrame.setAttribute("src", "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/");
+    iFrame.setAttribute("src", url);
     iFrame.setAttribute("allowfullscreen", "true");
 
     bookTitle.classList.add("book_title");
-    bookTitle.innerHTML = "ECDL Bildbearbeitung mit GIMP 2.8";
+    bookTitle.innerHTML = title;
 
     closeLightbox.setAttribute("id", "closeLightbox");
     closeLightbox.innerHTML = "X";
