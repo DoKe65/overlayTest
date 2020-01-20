@@ -13,9 +13,14 @@
 
 // const lpUrl = "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/";
 // const lpTitle = "Leseprobe ECDL Bildbearbeitung GIMP 2.8";
+const btnVorschau = document.getElementById("btnVorschau");
 
-const lpUrl = "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/";
-const lpTitle = "Leseprobe ECDL Bildbearbeitung GIMP 2.8";
+// const lpUrl = "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/";
+// const lpTitle = "Leseprobe ECDL Bildbearbeitung GIMP 2.8";
+const lpFolder = btnVorschau.getAttribute("data-url");
+const lpName = btnVorschau.getAttribute("data-title");
+const lpUrl = `https://kursunterlagen.ch/leseproben/${lpFolder}/`;
+const lpTitle = `Leseprobe ${lpName}`;
 
 function showLightbox(url, title) {
 
