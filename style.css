@@ -2,7 +2,8 @@ body {
   font-family: Karla, Helvetica, sans-serif;
 }
 
-#btnVorschau {
+#btnVorschau,
+.btnPdf {
   display: inline-block;
   font-size: 1em;
   margin: 1em;
