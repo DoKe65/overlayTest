@@ -3,12 +3,12 @@ const btnVorschau = document.getElementById("btnVorschau");
 // Im Produkt muss für den Button die entsprechenden data- Attributte
 // gesetzt werden, z. B. data-url="kursunterlagen/leseproben/LP_ECDL_BB"
 // und data-title="ECDL Bidlbearbeitung mit GIMP 2.8"
-// const url = btnVorschau.getAttribute("data-url");
-// const title = btnVorschau.getAttribute("data-title");
+const url = btnVorschau.getAttribute("data-url");
+const title = btnVorschau.getAttribute("data-title");
 
 // temporarily hardcoded for testing
-const url = "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/";
-const title = "ECDL Bildbearbeitung mit GIMP 2.8";
+// const url = "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/";
+// const title = "ECDL Bildbearbeitung mit GIMP 2.8";
 
 const overlay = document.createElement("div");
 const bookTitle = document.createElement("h1");
