@@ -33,7 +33,7 @@ function showLightbox(url, title) {
     bookTitle.innerHTML = title;
 
     closeLightbox.setAttribute("id", "closeLightbox");
-    closeLightbox.innerHTML = "X";
+    closeLightbox.innerHTML = "x";
     closeLightbox.addEventListener("click", (e) => {
       document.body.removeChild(overlay);
     });

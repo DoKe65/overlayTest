@@ -22,11 +22,10 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: #4e4e4ec2;
+  background-color: #5C5C5CC7;
 }
 
 #lightbox {
-  z-index: 2;
   background-color: white;
   border-radius: 10px;
   /* width: 80%; */
@@ -54,7 +53,7 @@ body {
   background: none;
   font-size: 1.5rem;
   float: right;
-  padding: 0.6em 0.8em;
+  padding: 0.3em 0.8em;
 }
 
 #closeLightbox:hover {
