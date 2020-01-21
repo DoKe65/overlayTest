@@ -3,7 +3,7 @@ body {
 }
 
 #btnVorschau,
-.btnPdf {
+#btnPdf {
   display: inline-block;
   font-size: 1em;
   margin: 1em;
