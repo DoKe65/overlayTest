@@ -19,7 +19,6 @@ Desktop:
 
 Mobile:
   <button id="btnPdf"
-    data-url="ecdl_bb_gimp28"
     data-pdf="LP_ECDL_BB_GIMP_2_8_F_2016.pdf"
     onclick="openLink()">
     Vorschau (PDF) →
@@ -82,12 +81,15 @@ function showLightbox(url, title) {
 // Für mobile Vorschau (PDF)
 
 const btnPdf = document.getElementById("btnPdf");
-// Auslesen der lehrmittelspezifischen Angaben im Button
-const pdfFolder = btnPdf.getAttribute("data-url");
+// Auslesen des Dateinamens im Button
 const pdfName = btnPdf.getAttribute("data-pdf");
 // definieren der url
-const pdfLink = `${serverUrl}${pdfFolder}/${pdfName}`;
+const pdfLink = `${lpUrl}${pdfName}`;
 
+// Aufruf über Button, in neuem Fenster. Mögliche Alternativen:
+// 1. window.open(pdfLink, "_parent") -> öffnet im selben Fenster
+// 2. Overlay mit Schliessbutton, analog zur Desktopversion. Könnte dann
+// in die showLightbox-Funktion intergriert werden (if target = btnVorschau ... else)
 function openLink() {
   window.open(pdfLink);
 }
