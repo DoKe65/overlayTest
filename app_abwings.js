@@ -47,7 +47,12 @@ function showLightbox(url, title) {
   closeLightbox.innerHTML = "x";
   closeLightbox.addEventListener("click", (e) => {
     document.body.removeChild(overlay);
+  });
 
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      document.body.removeChild(overlay);
+    }
   });
 
   lightbox.appendChild(bookTitle);
