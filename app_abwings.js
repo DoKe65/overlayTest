@@ -17,7 +17,7 @@ const btnVorschau = document.getElementById("btnVorschau");
 const lpFolder = btnVorschau.getAttribute("data-url");
 const lpName = btnVorschau.getAttribute("data-title");
 // Zusammensetzen zur Url und des Titels
-const lpUrl = `http://wings.ch/vorschauen/${lpFolder}/`;
+const lpUrl = `https://www.wings.ch/vorschauen/${lpFolder}/`;
 const lpTitle = `Leseprobe ${lpName}`;
 
 // Die folgende Funktion erstellt das Overlay mit einem iFrame, der die
