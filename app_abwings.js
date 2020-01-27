@@ -3,22 +3,37 @@
 // const lpUrl = "https://kursunterlagen.ch/leseproben/ECDL_BB_GIMP28/";
 // const lpTitle = "Leseprobe ECDL Bildbearbeitung GIMP 2.8";
 
-/* auf der Artikel-Seite des Shops einzufügender Button (Bsp. ECDL BB):
+// Speicheradresse der Vorschauen:
+const serverUrl = "https://wings.ch/vorschauen/";
+
+/*
+auf der Artikel-Seite des Shops einzufügende Buttons (Bsp. ECDL BB):
+
+Desktop:
   <button id="btnVorschau"
     data-url="ecdl_bb_gimp28"
     data-title="ECDL Bildbearbeitung mit GIMP 2.8"
     onclick="showLightbox(lpUrl, lpTitle)">
     Vorschau →
   </button>
+
+Mobile:
+  <button id="btnPdf"
+    data-pdf="LP_ECDL_BB_GIMP_2_8_F_2016.pdf"
+    onclick="openLink()">
+    Vorschau (PDF) →
+  </button>
 */
+
 
 const btnVorschau = document.getElementById("btnVorschau");
 // Auslesen der Lehrmittelspezifischen Angaben im Button
 const lpFolder = btnVorschau.getAttribute("data-url");
 const lpName = btnVorschau.getAttribute("data-title");
 // Zusammensetzen zur Url und des Titels
-const lpUrl = `http://www.wings.ch/vorschauen/${lpFolder}/`;
+const lpUrl = `${serverUrl}${lpFolder}/`;
 const lpTitle = `Leseprobe ${lpName}`;
+
 
 // Die folgende Funktion erstellt das Overlay mit einem iFrame, der die
 // entsprechende Vorschau öffnet. Die Funktionn wird über das Attributt
@@ -61,4 +76,20 @@ function showLightbox(url, title) {
   overlay.appendChild(lightbox);
   document.body.appendChild(overlay);
 
+}
+
+// Für mobile Vorschau (PDF)
+
+const btnPdf = document.getElementById("btnPdf");
+// Auslesen des Dateinamens im Button
+const pdfName = btnPdf.getAttribute("data-pdf");
+// definieren der url
+const pdfLink = `${lpUrl}${pdfName}`;
+
+// Aufruf über Button, im selben Fenster. Mögliche Alternativen:
+// 1. window.open(pdfLink) -> öffnet in neuem Tab/Fenster
+// 2. Overlay mit Schliessbutton, analog zur Desktopversion. Könnte dann
+// in die showLightbox-Funktion intergriert werden (if target = btnVorschau ... else)
+function openLink() {
+  window.open(pdfLink, "_parent");
 }

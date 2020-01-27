@@ -86,10 +86,10 @@ const pdfName = btnPdf.getAttribute("data-pdf");
 // definieren der url
 const pdfLink = `${lpUrl}${pdfName}`;
 
-// Aufruf über Button, in neuem Fenster. Mögliche Alternativen:
-// 1. window.open(pdfLink, "_parent") -> öffnet im selben Fenster
+// Aufruf über Button, im selben Fenster. Mögliche Alternativen:
+// 1. window.open(pdfLink) -> öffnet in neuem Tab/Fenster
 // 2. Overlay mit Schliessbutton, analog zur Desktopversion. Könnte dann
 // in die showLightbox-Funktion intergriert werden (if target = btnVorschau ... else)
 function openLink() {
-  window.open(pdfLink);
+  window.open(pdfLink, "_parent");
 }
